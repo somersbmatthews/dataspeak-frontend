@@ -1,0 +1,16 @@
+	<div class="container"></div>	
+
+			<h2>Please Login</h2>
+    	<form ng-submit="ctrl.processLoginForm()">
+	  		<input type="text" ng-model="ctrl.formdata.username" placeholder="username"/>
+			<input type="text" ng-model="ctrl.formdata.email" placeholder="email"/>
+			<input type="text" ng-model="ctrl.formdata.password" placeholder="password"/>
+			<input class="submit" type="submit"/>
+	 	</form>
+	 	
+	 	<span>Not a member? Please</span>
+	 	
+	 	<span ng-click="ctrl.register()">Register</span>
+	 	
+
+	</div>
