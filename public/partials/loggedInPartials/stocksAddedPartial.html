@@ -1,1 +1,15 @@
 <h2>stocks added partial</h2>
+<div >
+	<ul class="list-group">
+		<li ng-repeat="stock in stctrl.stocksArray track by $index" class="list-group-item d-flex justify-content-between align-items-center">{{stock.companyName}} ({{stock.symbol}})
+
+			<span>{{stock.shares}}</span>
+		
+		</li>
+		
+	</ul>
+	
+</div>
+
+
+

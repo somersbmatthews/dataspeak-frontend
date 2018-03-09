@@ -20,7 +20,8 @@ app.controller('mainController', ['$http', function($http){
 	console.log('this is formdata', this.formdata)
 
 
-	this.includePath = 'partials/LoginPartial.html';
+	// this.includePath = 'partials/LoginPartial.html';
+	this.includePath = 'partials/LoggedInPartial.html';
 
 
 	this.triggerLoggedIn = function() {
@@ -43,8 +44,6 @@ app.controller('mainController', ['$http', function($http){
 			} else {
 				that.triggerLoggedIn()
 			}
-		}).then(()=>{
-			
 		})
 	}
 	this.processLoginForm = function(){

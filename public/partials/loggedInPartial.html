@@ -1,9 +1,19 @@
-<h2>Thanks! You are logged in.</h2>
 
-<div class="createPortfolioPartial" ng-include="'partials/loggedInPartials/createPortfolioPartial.html'"></div>
-<div class="getReportPartial" ng-include="'partials/loggedInPartials/getReportPartial.html'"></div>
-<div class="portfolioListPartial" ng-include="'partials/loggedInPartials/portfolioListPartial.html'"></div>
-<div class="showGraphPartial" ng-include="'partials/loggedInPartials/showGraphPartial.html'"></div>
-<div class="showReportPartial" ng-include="'partials/loggedInPartials/showReportPartial.html'"></div>
-<div class="stocksAddedPartial" ng-include="'partials/loggedInPartials/stocksAddedPartial.html'"></div>
-<div class="symbolPartial" ng-include="'partials/loggedInPartials/symbolPartial.html'"></div>
+<div ng-controller="stocksController as stctrl" class="row">
+	<div class="col-3">
+		<div class="symbolPartial " ng-include="'partials/loggedInPartials/symbolPartial.html'"></div>
+		<div class="numberOfSharesPartial " ng-include="'partials/loggedInPartials/numberOfSharesPartial.html'"></div>
+	</div>
+		
+		<div class="stocksAddedPartial" ng-include="'partials/loggedInPartials/stocksAddedPartial.html'"></div>
+	
+</div>
+
+
+
+	<div class="createPortfolioPartial" ng-include="'partials/loggedInPartials/createPortfolioPartial.html'"></div>
+	<div class="getReportPartial" ng-include="'partials/loggedInPartials/getReportPartial.html'"></div>
+	<div class="portfolioListPartial" ng-include="'partials/loggedInPartials/portfolioListPartial.html'"></div>
+	<div class="showGraphPartial" ng-include="'partials/loggedInPartials/showGraphPartial.html'"></div>
+	<div class="showReportPartial" ng-include="'partials/loggedInPartials/showReportPartial.html'"></div>
+	

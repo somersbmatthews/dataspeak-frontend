@@ -4,12 +4,21 @@
   "description": "frontend for the dataspeak application",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch ./node_modules/bootswatch/dist/darkly -o ./public/css",
+    "scss2": "node-sass --watch ./node_modules/bootswatch/dist/darkly/_variables.scss -o ./public/css"
   },
   "author": "Somers B Matthews",
   "license": "ISC",
   "dependencies": {
     "bootswatch": "^4.0.0",
     "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.2",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "node-sass": "^4.7.2",
+    "sass": "^1.0.0-beta.5.3"
   }
 }
