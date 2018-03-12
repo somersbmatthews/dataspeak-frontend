@@ -5,15 +5,17 @@
 		<div class="numberOfSharesPartial " ng-include="'partials/loggedInPartials/numberOfSharesPartial.html'"></div>
 	</div>
 		
-		<div class="stocksAddedPartial" ng-include="'partials/loggedInPartials/stocksAddedPartial.html'"></div>
-	
-</div>
+		<div class="col-3 stocksAddedPartial top-buffer" ng-include="'partials/loggedInPartials/stocksAddedPartial.html'"></div>
+		<div class="col-3 portfolioListPartial top-buffer" ng-include="'partials/loggedInPartials/portfolioListPartial.html'"></div>
+		<div class="col-3 reportListPartial top-buffer" ng-include="'partials/loggedInPartials/reportListPartial.html'"></div>
 
+</div>
+<div ng-controller="stocksController as stctrl" class="showReportPartial" ng-include="'partials/loggedInPartials/showReportPartial.html'"></div>
 
 
 	<div class="createPortfolioPartial" ng-include="'partials/loggedInPartials/createPortfolioPartial.html'"></div>
 	<div class="getReportPartial" ng-include="'partials/loggedInPartials/getReportPartial.html'"></div>
-	<div class="portfolioListPartial" ng-include="'partials/loggedInPartials/portfolioListPartial.html'"></div>
+	
 	<div class="showGraphPartial" ng-include="'partials/loggedInPartials/showGraphPartial.html'"></div>
-	<div class="showReportPartial" ng-include="'partials/loggedInPartials/showReportPartial.html'"></div>
+	
 	

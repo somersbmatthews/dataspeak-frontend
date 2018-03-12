@@ -1,1 +1,10 @@
-<h2>portfolio list partial</h2>
+
+<div >
+	<ul class="list-group">
+		<li ng-repeat="portfolio in stctrl.portfoliosArray track by $index" class="list-group-item d-flex justify-content-between align-items-center">{{portfolio.portfolioName}}
+		
+		</li>
+		
+	</ul>
+	
+</div>

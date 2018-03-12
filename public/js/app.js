@@ -1,8 +1,9 @@
 console.log('hey')
+
 const app = angular.module('dataspeak', [])
 
 
-app.controller('mainController', ['$http', function($http){
+app.controller('mainController', [ '$http', function($http){
 
 	// $http({
 	// 	method: 'GET',
@@ -18,6 +19,7 @@ app.controller('mainController', ['$http', function($http){
 	this.message = "we have a controller"
 	this.formdata = {};
 	console.log('this is formdata', this.formdata)
+
 
 
 	// this.includePath = 'partials/LoginPartial.html';

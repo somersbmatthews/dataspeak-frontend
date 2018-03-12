@@ -3,8 +3,8 @@
 	<div >
 		<label class="col-form-label">Stock Symbol Search</label>
 		<div class="row justify-content-md-center">
-			<input type="text" class="col-7 form-control" placeholder="Company Name">
-			<button type="button" class="col-4 btn btn-primary">Search</button>
+			<input ng-model="stctrl.companyName" type="text" class="col-7 form-control" placeholder="Company Name">
+			<button type="button" class="col-4 btn btn-primary" ng-click="stctrl.getSymbols(stctrl.companyName)">Search</button>
 		</div>
 		
 	</div>
@@ -13,7 +13,7 @@
 	<div >
 		<label for="Select2"></label>
 			<select multiple class="form-control" id="Select2">
-				<option>{{stctrl.option1}}</option>
+				<option ng-click="stctrl.addStockToList()">{{stctrl.option1}}</option>
 				<option>{{stctrl.option2}}</option>
 				<option>{{stctrl.option3}}</option>
 				<option>{{stctrl.option4}}</option>
