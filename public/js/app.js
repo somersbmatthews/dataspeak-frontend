@@ -1,9 +1,12 @@
 console.log('hey')
 
+
 const app = angular.module('dataspeak', [])
 
 
 app.controller('mainController', [ '$http', function($http){
+
+	// test.testfunc()
 
 	// $http({
 	// 	method: 'GET',
