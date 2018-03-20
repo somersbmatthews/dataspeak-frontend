@@ -11,7 +11,7 @@ app.controller('stocksController', ['$scope','$http', function($scope,$http){
 	console.log(	"$scope is formdata from stocks controller",	$scope.formdata)
 	$scope.stocksArray=[{companyName:"Microsoft", shares: 400, symbol: "MSFT"},{companyName: "Ford Motors", shares: 300, symbol: "F"}]
 	$scope.portfoliosArray = [{portfolioName: "My Portfolio", portfolioId: 99},{portfolioName: "second portfolio", portfolioId: 100}]
-	$scope.reportsArray = [{name: "daily"},{name: "monthly"},{name: "annually"}]
+	$scope.reportsArray = [{name: "daily"},{name: "weekly"},{name: "monthly"}, {name: "quarterly"},{name: "annually"}]
 	$scope.companyName = ""
 
 
@@ -27,6 +27,15 @@ app.controller('stocksController', ['$scope','$http', function($scope,$http){
 	$scope.option7=""
 	$scope.option8=""
 
+	// this function deletes stocks
+	$scope.deleteStock(index){
+
+	}
+
+	// this function edits stocks
+	$scope.editStock(index){
+		
+	}
 
 	$scope.getSymbols= function(){
 		var that =	$scope
