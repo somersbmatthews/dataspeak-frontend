@@ -18,7 +18,7 @@ app.controller('stocksController', ['$scope','$http', function($scope,$http){
     
 	$scope.report = "before get report"
 
-	$scope.option1="APPL = Apple"
+	$scope.option1= "APPL = Apple"
 	$scope.option2=""
 	$scope.option3=""
 	$scope.option4=""

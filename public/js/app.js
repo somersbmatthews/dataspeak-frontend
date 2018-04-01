@@ -1,10 +1,7 @@
-console.log('hey')
-
 
 const app = angular.module('dataspeak', [])
 
-
-app.controller('mainController', [ '$http', function($http){
+app.controller('mainController', [ '$scope','$http', function($http, $scope){
 
 	// test.testfunc()
 
@@ -19,28 +16,29 @@ app.controller('mainController', [ '$http', function($http){
 	// })
 
 	let isLoggedIn = false
-	this.message = "we have a controller"
-	this.formdata = {};
+	$scope.message = "we have a controller"
+	$scope.formdata = {};
 	console.log('this is formdata', this.formdata)
 
 
 
-	// this.includePath = 'partials/LoginPartial.html';
-	this.includePath = 'partials/LoggedInPartial.html';
+	// this.includePath = 'partials/Login.html';
+	this.includePath = 'partials/LoggedIn.html';
 
 
-	this.triggerLoggedIn = function() {
+	$scope.triggerLoggedIn = function() {
+		var that = this
 		isLoggedIn = true
 		console.log("THIS IS LOGGED IN",isLoggedIn)
-		this.includePath = 'partials/LoggedInPartial.html'
+		that.includePath = 'partials/LoggedIn.html'
 	}
 
-	this.processRegistrationForm = function() {
+	$scope.processRegistrationForm = function() {
 		var that = this
 		$http({
 			url: 'http://localhost:3000/users/',
 			method: 'POST',
-			data: this.formdata
+			data: that.formdata
 		}).then(function(response){
 			console.log
 			that.formdata = {};
@@ -51,12 +49,12 @@ app.controller('mainController', [ '$http', function($http){
 			}
 		})
 	}
-	this.processLoginForm = function(){
+	$scope.processLoginForm = function(){
 		var that = this
 		$http({
 			url: 'http://localhost:3000/users/login',
 			method: 'POST',
-			data: this.formdata
+			data: that.formdata
 		}).then(function(response){
 			that.formdata = {};
 			if(response.data.status === 404) {
@@ -65,13 +63,13 @@ app.controller('mainController', [ '$http', function($http){
 				that.triggerLoggedIn()
 			}
 		}).then(()=>{
-			this.formdata = {};
+			$scope.formdata = {};
 		})
 	}
 
-	this.register = function(){
+	$scope.register = function(){
 
-		this.includePath = 'partials/RegistrationPartial.html'
+		that.includePath = 'partials/Registration.html'
 	}
 
 }])

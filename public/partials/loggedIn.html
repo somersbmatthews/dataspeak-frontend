@@ -1,21 +1,21 @@
-<div ng-controller="stocksController as stctrl" class="showReportPartial" >
+<div ng-controller="stocksController as stctrl" class="showReport" >
 <div class="row">
 	<div class="col-3">
-		<div class="symbol " ng-include="'partials/loggedInPartials/symbolPartial.html'"></div>
-		<div class="numberOfShares " ng-include="'partials/loggedInPartials/numberOfSharesPartial.html'"></div>
+		<div class="symbol " ng-include="'partials/loggedInPartials/symbol.html'"></div>
+		<div class="numberOfShares " ng-include="'partials/loggedInPartials/numberOfShares.html'"></div>
 	</div>
 		
-		<div class="col-3 stocksAdded top-buffer" ng-include="'partials/loggedInPartials/stocksAddedPartial.html'"></div>
-		<div class="col-3 portfolioList top-buffer" ng-include="'partials/loggedInPartials/portfolioListPartial.html'"></div>
-		<div class="col-3 reportList top-buffer" ng-include="'partials/loggedInPartials/reportListPartial.html'"></div>
+		<div class="col-3 stocksAdded top-buffer" ng-include="'partials/loggedInPartials/stocksAdded.html'"></div>
+		<div class="col-3 portfolioList top-buffer" ng-include="'partials/loggedInPartials/portfolioList.html'"></div>
+		<div class="col-3 reportList top-buffer" ng-include="'partials/loggedInPartials/reportList.html'"></div>
 
 </div>
-<div ng-include="'partials/loggedInPartials/showReportPartial.html'"></div>
+<div ng-include="'partials/loggedInPartials/showReport.html'"></div>
 </div>
 
-	<div class="createPortfolio" ng-include="'partials/loggedInPartials/createPortfolioPartial.html'"></div>
-	<div class="getReport" ng-include="'partials/loggedInPartials/getReportPartial.html'"></div>
+	<div class="createPortfolio" ng-include="'partials/loggedInPartials/createPortfolio.html'"></div>
+	<div class="getReport" ng-include="'partials/loggedInPartials/getReport.html'"></div>
 	
-	<div class="showGraph" ng-include="'partials/loggedInPartials/showGraphPartial.html'"></div>
+	<div class="showGraph" ng-include="'partials/loggedInPartials/showGraph.html'"></div>
 	
 	
