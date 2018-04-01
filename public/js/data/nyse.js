@@ -1,4 +1,4 @@
-const nyse = [
+[
  {
    "Symbol": "DDD",
    "Name": "3D Systems Corporation",
@@ -37668,4 +37668,3 @@ const nyse = [
    "FIELD10": ""
  }
 ]
-export default nyse;
