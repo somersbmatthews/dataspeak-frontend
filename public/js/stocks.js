@@ -62,7 +62,7 @@ app.controller('stocksController', ['$scope','$http', function($scope,$http){
 	$scope.getFinancialData = function(){
 		var that =	$scope
 		$http({
-			url: "https://sandbox.tradier.com/v1/",
+			url: "",
 			method: 'GET',
 			data:	$scope.formdata,
 			headers: {
