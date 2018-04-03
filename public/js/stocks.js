@@ -40,7 +40,7 @@ app.controller('stocksController', ['$scope','$http', function($scope,$http){
 	$scope.getSymbols= function(){
 		var that =	$scope
 		$http({
-			url: "https://sandbox.tradier.com/v1/",
+			url: "http://localhost:9292/tickers",
 			method: 'GET',
 			data:	$scope.formdata,
 			headers: {
