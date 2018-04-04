@@ -77,6 +77,20 @@ app.controller('stocksController', ['$scope','$http', function($scope,$http){
 
 
 	}
+	$scope.getMonthlyFinancialData = function(){
+		var that =	$scope
+		$http({
+			url: "https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY"+ tickerSymbol  +"&apikey=YA7LJZICP2KP4Q8T",
+			method: 'GET',
+			data:	$scope.formdata
+
+		}).then(function(response){
+			console.log(	"$scope IS RESPONSE FROM GET SYMBOL", response)
+
+		})
+
+
+	}
 	$scope.getReport = function(){
 		
 
