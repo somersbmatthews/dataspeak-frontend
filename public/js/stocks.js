@@ -13,6 +13,7 @@ app.controller('stocksController', ['$scope','$http', function($scope,$http){
 	$scope.portfoliosArray = [{portfolioName: "My Portfolio", portfolioId: 99},{portfolioName: "second portfolio", portfolioId: 100}]
 	$scope.reportsArray = [{name: "daily"},{name: "weekly"},{name: "monthly"}, {name: "quarterly"},{name: "annually"}]
 	$scope.companyName = ""
+	$scope.tickerSymbol = ""
 
 
     
@@ -59,16 +60,15 @@ app.controller('stocksController', ['$scope','$http', function($scope,$http){
 		that.stocksArray.push(newStock)
 
 	}
-	$scope.getFinancialData = function(){
+
+	// YA7LJZICP2KP4Q8T
+
+	$scope.getDailyFinancialData = function(){
 		var that =	$scope
 		$http({
-			url: "",
+			url: "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol="+ tickerSymbol  +"&apikey=YA7LJZICP2KP4Q8T",
 			method: 'GET',
-			data:	$scope.formdata,
-			headers: {
-				authorization: "YA7LJZICP2KP4Q8T",
-				accept: "application/json"
-			}
+			data:	$scope.formdata
 
 		}).then(function(response){
 			console.log(	"$scope IS RESPONSE FROM GET SYMBOL", response)
