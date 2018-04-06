@@ -77,11 +77,11 @@ app.controller('stocksController', ['$scope','$http', function($scope,$http){
 
 
 	}
-	https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=MSFT&apikey=demo
+	
 		$scope.getWeeklyFinancialData = function(){
 		var that =	$scope
 		$http({
-			url: "https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY"+ tickerSymbol +"&apikey=YA7LJZICP2KP4Q8T",
+			url: "https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol="+ tickerSymbol +"&apikey=YA7LJZICP2KP4Q8T",
 			method: 'GET',
 			data:	$scope.formdata
 
