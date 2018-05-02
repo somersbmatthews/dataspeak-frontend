@@ -1,5 +1,5 @@
 
-const app = angular.module('dataspeak', [])
+const app = angular.module('dataspeak', ['ng-fusioncharts'])
 
 app.controller('mainController', [ '$scope','$http', function($http, $scope){
 
